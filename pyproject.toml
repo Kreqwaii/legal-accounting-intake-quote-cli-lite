@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legal-accounting-intake-quote-cli-lite"
+version = "0.1.0"
+description = "Zero-dependency Python 3.9+ SQLite CLI for legal & accounting client intake, document checklists, and retainer quote calculation."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "ExternalHunter" }
+]
+keywords = ["legal", "accounting", "intake", "retainer", "quote", "cli", "sqlite"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Legal Industry",
+  "Intended Audience :: Financial and Insurance Industry",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+intake-cli = "intake_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["intake_cli*"]
